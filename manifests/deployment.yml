@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: gsooripipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: gsooripipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: gsooripipelinesjavascriptdocker 
+          image: g1sooricontainerreg.azurecr.io/gsooripipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
